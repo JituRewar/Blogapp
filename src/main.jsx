@@ -118,6 +118,8 @@ import Post from "./pages/Post";
 
 import AllPosts from "./pages/AllPosts";
 import AiChat from "./pages/Aichatboat";
+import Pdf from "./pages/Pdf.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -168,6 +170,15 @@ const router = createBrowserRouter([
           </AuthLayout>
         ),
       },
+      {
+  path: "/pdf",
+  element: (
+    <AuthLayout authentication>
+      <Pdf />
+    </AuthLayout>
+  ),
+},
+
       {
         path: "/edit-post/:slug",
         element: (

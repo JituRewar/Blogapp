@@ -38,6 +38,12 @@ function Header() {
       slug: "/aichat",
       active: authStatus,
     },
+    {
+  name: "PDF Extract",
+  slug: "/pdf",
+  active: authStatus,
+},
+
   ];
 
   return (
