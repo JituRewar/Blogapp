@@ -41,20 +41,19 @@
 // }
 
 // export default App
-
-
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import './App.css'
 import authService from "./appwrite/auth"
 import { login, logout } from "./store/authSlice"
 import { Footer, Header } from './components'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Container, Button } from './components/index'
 
 function App() {
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
+  const location = useLocation()
 
   useEffect(() => {
     authService.getCurrentUser()
@@ -98,7 +97,6 @@ function App() {
       <main className="grow">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-white py-20 lg:py-32">
-          {/* Subtle Background Decoration */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-5 pointer-events-none">
              <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#3498db] blur-[120px]"></div>
           </div>
@@ -154,23 +152,21 @@ function App() {
           </Container>
         </section>
 
-        {/* Dynamic Content (Outlet) */}
-        <section className="py-16">
-          <Container>
-            <div className="rounded-3xl border border-dashed border-slate-200 p-8 min-h-50 bg-white">
-              <Outlet />
-            </div>
-          </Container>
-        </section>
+        {/* ✅ Outlet renders ONLY when route is not "/" */}
+        {location.pathname !== "/" && (
+          <section className="py-16">
+            <Container>
+              <div className="rounded-3xl border border-dashed border-slate-200 p-8 min-h-50 bg-white">
+                <Outlet />
+              </div>
+            </Container>
+          </section>
+        )}
       </main>
 
       <Footer />
     </div>
-  ) : (
-    <div className="h-screen w-full flex items-center justify-center bg-white">
-        <div className="w-12 h-12 border-4 border-[#3498db]/20 border-t-[#3498db] rounded-full animate-spin"></div>
-    </div>
-  )
+  ) : null
 }
 
 export default App
