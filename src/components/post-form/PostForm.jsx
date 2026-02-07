@@ -133,7 +133,7 @@ TASK:
                 <Input label="Featured Image :" type="file" className="mb-4" accept="image/*" {...register("image", { required: !post })} />
                 {post && (
                     <div className="w-full mb-4">
-                        <img src={appwriteService.getFilePreview(post.featuredimage)} alt={post.title} className="rounded-lg" />
+                        <img src={appwriteService.getFileView(post.featuredimage)} alt={post.title} className="rounded-lg" />
                     </div>
                 )}
                 <Select options={["active", "inactive"]} label="Status" className="mb-4" {...register("status", { required: true })} />

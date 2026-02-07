@@ -3,11 +3,11 @@ import appwriteService from "../appwrite/config";
 
 function PostCard({ title, featuredimage }) {
   const imageUrl = featuredimage
-    ? appwriteService.getFilePreview(featuredimage)
+    ? appwriteService.getFileView(featuredimage)
     : "/placeholder.png";
 
   return (
-    <div className="w-full bg-gray-800 rounded-lg overflow-hidden">
+    <div className="w-full bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
       <img
         src={imageUrl}
         alt={title}
@@ -16,7 +16,9 @@ function PostCard({ title, featuredimage }) {
           e.currentTarget.src = "/placeholder.png";
         }}
       />
-      <h2 className="p-3 text-white font-semibold">{title}</h2>
+      <h2 className="p-4 text-gray-900 font-semibold text-lg">
+        {title}
+      </h2>
     </div>
   );
 }
