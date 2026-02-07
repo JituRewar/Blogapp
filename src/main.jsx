@@ -15,6 +15,7 @@ import EditPost from "./pages/EditPost";
 import Post from "./pages/Post";
 
 import AllPosts from "./pages/AllPosts";
+import AiChat from "./pages/Aichatboat";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,15 @@ const router = createBrowserRouter([
           </AuthLayout>
         ),
       },
+      {
+  path: "/aichat",
+  element: (
+    <AuthLayout authentication>
+      <AiChat />
+    </AuthLayout>
+  ),
+},
+
       {
         path: "/add-post",
         element: (
