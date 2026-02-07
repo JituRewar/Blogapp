@@ -6,7 +6,7 @@ import { Github, Linkedin, Instagram, Twitter } from 'lucide-react'
 
 function Footer() {
   return (
-    <section className="relative overflow-hidden py-12 bg-gray-400 border-t-2 border-black">
+    <section className="relative overflow-hidden py-12 bg-gray-200 border-t-2 border-black">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="flex flex-wrap -m-6">
           {/* Brand/Logo Section */}
