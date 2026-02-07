@@ -5,6 +5,7 @@ import appwriteService from "../../appwrite/config"
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { addCoins } from "../../store/authSlice";
 
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);

@@ -78,6 +78,8 @@ function Dashboard() {
     const [queryCount, setQueryCount] = useState(0);
     const [loading, setLoading] = useState(true);
 
+    const coins = useSelector((state) => state.auth.coins);
+
     useEffect(() => {
         // Fetch real post count from Appwrite
         appwriteService.getPosts([]).then((posts) => {
@@ -104,6 +106,14 @@ function Dashboard() {
                     <h1 className="text-4xl font-extrabold text-gray-900">Dashboard</h1>
                     <p className="text-gray-600 mt-2">Welcome back, <span className="font-semibold text-orange-500">{userData?.name}</span></p>
                 </div>
+
+                <div className="bg-white p-6 rounded-2xl border border-orange-100 shadow-sm">
+    <p className="text-sm font-bold text-gray-400 uppercase">Wallet Balance</p>
+    <div className="flex items-center">
+        <span className="text-2xl mr-2">🪙</span>
+        <h2 className="text-4xl font-black text-orange-500">{coins} Coins</h2>
+    </div>
+</div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     {stats.map((stat) => (
