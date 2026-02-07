@@ -15,6 +15,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@tinymce/tinymce-react": "^6.3.0",
     "appwrite": "^21.5.0",
+    "express": "^4.22.1",
     "html-react-parser": "^5.2.11",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
