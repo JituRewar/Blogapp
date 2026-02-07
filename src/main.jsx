@@ -171,15 +171,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-  path: "/pdf",
-  element: (
-    <AuthLayout authentication>
-      <Pdf />
-    </AuthLayout>
-  ),
-},
-
-      {
         path: "/edit-post/:slug",
         element: (
           <AuthLayout authentication>

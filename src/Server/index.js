@@ -9,9 +9,11 @@ import path from "path";
 import { pdfToImages } from "./pdfToImages.js";
 import { runOCR } from "./ocr.js";
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+console.log("🔥 RUNNING PDF OCR BACKEND INDEX.JS");
 
 const upload = multer({ dest: "server/uploads/" });
 
@@ -34,7 +36,7 @@ app.post("/upload", upload.single("pdf"), async (req, res) => {
       });
     }
 
-    // cleanup
+    
     fs.unlinkSync(pdfPath);
 
     res.json({ pages: results });
