@@ -119,6 +119,7 @@ import Post from "./pages/Post";
 import AllPosts from "./pages/AllPosts";
 import AiChat from "./pages/Aichatboat";
 import Pdf from "./pages/Pdf.jsx";
+import Dashboard from "./pages/Dashboard"
 
 
 const router = createBrowserRouter([
@@ -162,6 +163,22 @@ const router = createBrowserRouter([
           </AuthLayout>
         ),
       },
+      {
+        path: "/pdf",
+        element: (
+          <AuthLayout authentication>
+            <Pdf />
+          </AuthLayout>
+        ),
+      },
+      {
+  path: "/dashboard", 
+  element: (
+    <AuthLayout authentication>
+      <Dashboard />
+    </AuthLayout>
+  ),
+},
       {
         path: "/add-post",
         element: (

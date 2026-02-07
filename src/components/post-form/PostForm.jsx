@@ -5,6 +5,7 @@ import appwriteService from "../../appwrite/config"
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { addCoins } from '../../store/authSlice'
 
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
@@ -88,7 +89,10 @@ TASK:
                 ...data,
                 featuredimage: file ? file.$id : post.featuredimage,
             })
-            if (dbPost) navigate(`/post/${dbPost.$id}`)
+            if (dbPost) {
+                dispatch(addCoins(10)); 
+                navigate(`/post/${dbPost.$id}`);
+            }
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
             if (file) {
