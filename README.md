@@ -1,16 +1,84 @@
-# React + Vite
+QEconcePta – AI-Powered Learning & Blogging Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QEconcePta is a full-stack AI-powered educational blogging platform where users can create posts, upload resources, chat with an AI assistant, and earn coins based on activity.
+It combines Appwrite, React, Node.js, and Google Gemini AI to deliver a modern learning experience.
 
-Currently, two official plugins are available:
+-->Key Features
+--> Authentication
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-->User Signup & Login
 
-## React Compiler
+Protected routes using AuthLayout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Session handling via Appwrite
 
-## Expanding the ESLint configuration
+-->Notes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Create, edit, delete posts
+
+Rich Text Editor (RTE)
+
+Featured image upload
+
+User-specific posts
+
+Slug-based routing
+
+-->AI Features
+
+AI Chatbot (Gemini API)
+
+AI-Enhanced Post Content
+
+Markdown-formatted AI responses
+
+Backend-secured AI calls (API key not exposed)
+
+--> Dashboard
+
+Total posts count
+
+Coin system (10 coins per post)
+
+Activity summary
+
+Future-ready AI usage stats
+
+-->Upload Center
+
+Image uploads using Appwrite Storage
+
+Secure file previews
+
+--> Tech Stack
+Frontend
+
+React (Vite)
+
+React Router DOM
+
+Redux Toolkit
+
+Tailwind CSS
+
+Appwrite SDK
+
+Backend
+
+Node.js
+
+Express.js
+
+Google Gemini AI SDK
+
+dotenv
+
+CORS
+
+Database & Storage
+
+Appwrite Database
+
+Appwrite Storage
+
+Appwrite Authentication
