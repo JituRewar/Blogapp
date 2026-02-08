@@ -8,14 +8,12 @@ function Footer() {
 
   return (
     <section className="relative overflow-hidden bg-[#fdf2f7] pt-16 pb-8 border-t border-blue-100">
-      {/* Subtle Background Glows */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100/40 rounded-full blur-[80px] z-0"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-pink-100/40 rounded-full blur-[80px] z-0"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap -m-6">
           
-          {/* Brand & Socials */}
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
             <div className="flex h-full flex-col">
               <div className="mb-6 inline-flex items-center">
@@ -47,7 +45,6 @@ function Footer() {
             </div>
           </div>
 
-          {/* Links Sections */}
           {[
             { 
                 title: "Platform", 
@@ -86,7 +83,6 @@ function Footer() {
           ))}
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-16 border-t border-slate-200/60 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm font-bold text-slate-400">
             &copy; {currentYear} <span className="text-slate-600">Quantum-Explorer</span>. All rights reserved.

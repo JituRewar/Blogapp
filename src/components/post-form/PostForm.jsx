@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { Button, Input, Select, RTE } from '../index'
 import appwriteService from "../../appwrite/config" 
 import { useNavigate } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux' // Added useDispatch
+import { useSelector, useDispatch } from 'react-redux' 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { addCoins } from '../../store/authSlice'
 
@@ -11,7 +11,7 @@ const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
 function PostForm({ post }) {
     const [isAiLoading, setIsAiLoading] = useState(false);
-    const dispatch = useDispatch(); // Initialized dispatch
+    const dispatch = useDispatch();
     
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
         defaultValues: {
@@ -37,7 +37,7 @@ function PostForm({ post }) {
 
         setIsAiLoading(true);
         try {
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // Corrected model name
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); 
 
             const prompt = `You are an expert educator. TOPIC: ${topic}. EXISTING CONTENT: ${content || "No content provided."} TASK: Provide a structured, high-quality educational explanation using Markdown.`;
 
@@ -110,8 +110,6 @@ function PostForm({ post }) {
     
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap lg:flex-nowrap gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            
-            {/* Main Editor Section */}
             <div className="w-full lg:w-2/3 space-y-6">
                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
                     <h2 className="text-sm font-bold uppercase tracking-widest text-[#3498db] mb-4">Content Creator</h2>
@@ -128,7 +126,6 @@ function PostForm({ post }) {
                 </div>
             </div>
 
-            {/* Sidebar Controls */}
             <div className="w-full lg:w-1/3 space-y-6">
                 <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 sticky top-6">
                     <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">Settings & Tools</h2>
