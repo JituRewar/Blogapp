@@ -98,7 +98,10 @@ TASK:
                     featuredimage: file.$id,
                     userID: userData.$id,
                 })
-                if (dbPost) navigate(`/post/${dbPost.$id}`)
+                if (dbPost) {
+                    dispatch(addCoins(10)); 
+                navigate(`/post/${dbPost.$id}`);
+                }
             }
         }
     }

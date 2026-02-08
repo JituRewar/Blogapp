@@ -51,13 +51,13 @@
 //     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
 //       <Container>
 //         <nav className="flex items-center justify-between py-3">
-        
+
 //           <Link to="/" className="flex items-center gap-2">
 //             <Logo width="60px" />
-            
+
 //           </Link>
 
-          
+
 //           <ul className="flex items-center gap-2">
 //             {authStatus && (
 //               <li className="flex items-center bg-orange-100 px-3 py-1 rounded-full border border-orange-200 mr-2">
@@ -79,7 +79,7 @@
 //                 )
 //             )}
 
-            
+
 //             {authStatus && (
 //               <li className="ml-2">
 //                 <LogoutBtn />
