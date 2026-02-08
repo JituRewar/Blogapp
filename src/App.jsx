@@ -1,46 +1,4 @@
-// import React, { useState, useEffect } from 'react'
-// import { useDispatch } from 'react-redux'
-// import './App.css'
-// import authService from "./appwrite/auth"
-// import {login, logout} from "./store/authSlice"
-// import { Footer, Header } from './components'
-// import { Outlet, useNavigate } from 'react-router-dom'
-// import { Container,Button } from './components/index'
 
-
-// function App() {
-//   const [loading, setLoading] = useState(true)
-//   const dispatch = useDispatch()
-//   const navigate = useNavigate()
-
-//   useEffect(() => {
-//     authService.getCurrentUser()
-//     .then((userData) => {
-//       if (userData) {
-//         dispatch(login({userData}))
-//       } else {
-//         dispatch(logout())
-//       }
-//     })
-//     .finally(() => setLoading(false))
-//   }, [])
-  
-//   return !loading ? (
-//     <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
-//       <div className='w-full block'>
-//         <Header />
-//         <main>
-         
-//          <Outlet />
-
-//         </main>
-//         <Footer />
-//       </div>
-//     </div>
-//   ) : null
-// }
-
-// export default App
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import './App.css'
@@ -95,7 +53,6 @@ function App() {
       <Header />
 
       <main className="grow">
-        {/* Hero Section */}
         <section className="relative overflow-hidden bg-white py-20 lg:py-32">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-5 pointer-events-none">
              <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#3498db] blur-[120px]"></div>
@@ -128,7 +85,6 @@ function App() {
           </Container>
         </section>
 
-        {/* Features Grid Section */}
         <section className="py-24 bg-slate-50/50">
           <Container>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -152,7 +108,6 @@ function App() {
           </Container>
         </section>
 
-        {/* ✅ Outlet renders ONLY when route is not "/" */}
         {location.pathname !== "/" && (
           <section className="py-16">
             <Container>
