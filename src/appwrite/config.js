@@ -20,7 +20,7 @@ async createPost({ title, slug, content, featuredimage, status, userID }) {
         return await this.databases.createDocument(
             conf.appwriteDatabaseId,
             conf.appwriteCollectionId,
-            ID.unique(), // keep this
+            ID.unique(), 
             {
                 title,
                 slug,
