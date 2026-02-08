@@ -29,13 +29,13 @@ function Dashboard() {
 
     return (
         <div className="min-h-screen w-full bg-[#fcfdff] relative overflow-hidden flex flex-col">
-            {/* Background Decorative Blobs */}
+       
             <div className="absolute top-[-5%] right-[-5%] w-[45%] h-[45%] bg-purple-100/40 rounded-full blur-[130px] -z-10"></div>
             <div className="absolute bottom-[-5%] left-[-5%] w-[35%] h-[35%] bg-blue-100/40 rounded-full blur-[110px] -z-10"></div>
 
             <Container>
                 <div className="py-16 px-4">
-                    {/* Header Section */}
+                 
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 animate-in fade-in slide-in-from-left-8 duration-1000">
                         <div>
                             <h1 className="text-6xl font-black text-slate-900 tracking-tight">
@@ -52,10 +52,10 @@ function Dashboard() {
                         </div>
                     </div>
 
-                    {/* Main Bento Grid */}
+                   
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         
-                        {/* Featured Wallet Card */}
+                       
                         <div className="lg:col-span-2 relative group overflow-hidden bg-linear-to-br from-[#3498db] via-[#2980b9] to-indigo-700 rounded-[3rem] p-10 text-white shadow-2xl shadow-blue-200 animate-in zoom-in-95 duration-1000 delay-100">
                             <div className="relative z-10 flex flex-col h-full justify-between">
                                 <div>
@@ -80,14 +80,13 @@ function Dashboard() {
                                 </div>
                             </div>
 
-                            {/* Decorative Elements */}
+                            
                             <div className="absolute top-[-10%] right-[-5%] w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:bg-white/15 transition-all duration-1000"></div>
                             <div className="absolute bottom-0 right-0 p-8 opacity-10">
                                 <span className="text-9xl font-black">REVISE</span>
                             </div>
                         </div>
 
-                        {/* Stats Sidebar Stack */}
                         <div className="flex flex-col gap-6">
                             {stats.map((stat, index) => (
                                 <div 
@@ -111,7 +110,6 @@ function Dashboard() {
                 </div>
             </Container>
 
-            {/* Subtle Footer branding */}
             <div className="mt-auto py-8 text-center text-slate-300 font-medium tracking-widest text-xs uppercase">
                 Internal Knowledge Network v2.0
             </div>
