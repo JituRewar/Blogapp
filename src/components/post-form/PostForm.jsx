@@ -37,7 +37,7 @@ function PostForm({ post }) {
 
         setIsAiLoading(true);
         try {
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); 
+            const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); 
 
             const prompt = `You are an expert educator. TOPIC: ${topic}. EXISTING CONTENT: ${content || "No content provided."} TASK: Provide a structured, high-quality educational explanation using Markdown.`;
 
