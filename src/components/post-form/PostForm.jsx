@@ -178,7 +178,7 @@ function PostForm({ post }) {
                                 onClick={handleAiEnhance}
                                 disabled={isAiLoading}
                                 className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-white transition-all duration-300 group
-                                    ${isAiLoading ? "bg-slate-400 cursor-not-allowed" : "bg-gradient-to-r from-violet-600 to-[#3498db] hover:shadow-xl hover:shadow-indigo-200 hover:-translate-y-1"}
+                                    ${isAiLoading ? "bg-slate-400 cursor-not-allowed" : "bg-linear-to-r from-violet-600 to-[#3498db] hover:shadow-xl hover:shadow-indigo-200 hover:-translate-y-1"}
                                 `}
                             >
                                 <span className={isAiLoading ? "animate-spin" : "group-hover:rotate-12 transition-transform"}>
