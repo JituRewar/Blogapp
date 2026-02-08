@@ -76,7 +76,7 @@ function App() {
 
               <div className="flex justify-center gap-4 pt-4">
                 <Button
-                  className="px-10 py-4 rounded-xl font-medium border-2 border-[#3498db] text-[#3498db] bg-white hover:bg-[#3498db] hover:text-white transform transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-blue-100"
+                  className="px-10 py-4 rounded-xl font-medium border-2 border-[#3498db] text-[#3498db]  hover:bg-[#3498db] hover:text-white transform transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-blue-100"
                 >
                   Explore Library
                 </Button>
