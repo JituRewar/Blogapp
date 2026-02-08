@@ -10,7 +10,6 @@ import { runOCR } from "./ocr.js";
 
 const app = express();
 
-// Allow frontend (Vite default port)
 app.use(
   cors({
     origin: "http://localhost:5173",
@@ -33,7 +32,6 @@ app.post("/upload", upload.single("pdf"), async (req, res) => {
 
     const pdfPath = req.file.path;
 
-    // Convert PDF → Images
     const imagePaths = await pdfToImages(pdfPath);
 
     const pages = [];
@@ -46,7 +44,6 @@ app.post("/upload", upload.single("pdf"), async (req, res) => {
       });
     }
 
-    // Cleanup uploaded PDF
     fs.unlinkSync(pdfPath);
 
     res.json({ pages });

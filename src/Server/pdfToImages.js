@@ -5,7 +5,6 @@ import path from "path";
 export async function pdfToImages(pdfPath) {
   const outputDir = "server/uploads/images";
 
-  // clean old images
   if (fs.existsSync(outputDir)) {
     fs.rmSync(outputDir, { recursive: true, force: true });
   }
@@ -20,7 +19,6 @@ export async function pdfToImages(pdfPath) {
 
   await pdf.convert(pdfPath, options);
 
-  // SORT files correctly
   return fs
     .readdirSync(outputDir)
     .filter((f) => f.endsWith(".png"))
