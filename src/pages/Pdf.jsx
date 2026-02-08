@@ -35,7 +35,6 @@ export default function Pdf() {
 
   return (
     <div className="min-h-screen bg-[#fff5f8] relative overflow-hidden font-sans text-slate-700">
-      {/* Background Decorative Elements */}
       <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-blue-200/40 rounded-full blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-pink-200/40 rounded-full blur-[100px] animate-pulse transition-all duration-1000"></div>
 
@@ -58,7 +57,6 @@ export default function Pdf() {
       </header>
 
       <main className="relative z-10 max-w-4xl mx-auto px-6 pb-20">
-        {/* Upload Zone */}
         <div className="bg-white/70 backdrop-blur-xl border-2 border-dashed border-blue-200 rounded-[2.5rem] p-8 md:p-12 mb-12 shadow-xl shadow-blue-100/50 transition-all hover:border-[#3498db]/50">
           <form onSubmit={handleSubmit} className="flex flex-col items-center text-center gap-6">
             <div className="w-20 h-20 bg-linear-to-tr from-pink-50 to-blue-50 rounded-full flex items-center justify-center animate-bounce duration-3000">
@@ -96,7 +94,6 @@ export default function Pdf() {
           </form>
         </div>
 
-        {/* Results Section */}
         <div className="space-y-6">
           {pages.length === 0 && !loading && (
             <div className="text-center py-20 animate-in fade-in zoom-in duration-1000">
