@@ -14,35 +14,6 @@ export class Service {
         this.bucket = new Storage(this.client);
     }
 
-// async createPost({ title, slug, content, featuredimage, status, userID }) {
-//     try {
-//         return await this.databases.createDocument(
-//             conf.appwriteDatabaseId,
-//             conf.appwriteCollectionId,
-//             ID.unique(), 
-//             {
-//                 title,
-//                 slug,         
-//                 content,
-//                 featuredimage,
-//                 status,
-//                 userID,
-//             }
-//         )
-//         console.log("POST DATA:", {
-//   title,
-//   slug,
-//   content,
-//   featuredimage,
-//   status,
-//   userID,
-// });
-
-//     } catch (error) {
-//         console.log("Appwrite service :: createPost :: error", error);
-//         throw error;
-//     }
-// }
 
 async createPost({ title, slug, content, featuredimage, status, userID }) {
     try {
