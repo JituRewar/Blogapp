@@ -2,6 +2,7 @@ import React from "react";
 import { Container, LogoutBtn } from "../index";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Logo from  "../../assets/logo.jpeg"
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status);
@@ -27,10 +28,10 @@ function Header() {
           
          
           <Link to="/" className="group flex items-center gap-3">
-            <div className="relative overflow-hidden rounded-full border-2 border-[#3498db]/30 p-0.5 transition-all duration-500 group-hover:border-[#3498db] group-hover:rotate-360">
+            <div className="relative overflow-hidden rounded-full border-2 border-[#3498db]/30 p-0.5 transition-all duration-500 group-hover:border-[#3498db] group-hover:rotate-360" style={{backgroundSize:"cover"}}>
               <img 
-                src="/path-to-your-quantum-logo.jpg" 
-                alt="Quantum Explorer-8" 
+                src={Logo} 
+                alt="Quantum Explorer-4" 
                 className="h-11 w-11 rounded-full object-cover"
               />
               <div className="absolute inset-0 rounded-full bg-linear-to-tr from-[#3498db]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
